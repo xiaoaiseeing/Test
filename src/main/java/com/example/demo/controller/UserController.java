@@ -33,6 +33,7 @@ public class UserController {
     @PostMapping("/addUser")
     public String addUser(@RequestBody User user) {
         User u = userRepository.save(user);
+        System.out.println("修改");
         return (u != null) ? "success":"error";
     }
 }
